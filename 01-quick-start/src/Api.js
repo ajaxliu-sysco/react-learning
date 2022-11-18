@@ -6,7 +6,7 @@ class App extends Component {
     }
     componentDidMount() {
         const url =
-            'https://api.covid19api.com/summary'
+            'http://127.0.0.1:8080/v1/hello'
         fetch(url)
             .then((result) => result.json())
             .then((result) => {
