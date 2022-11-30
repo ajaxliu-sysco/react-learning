@@ -40,26 +40,22 @@
 <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-
-
 <script type="text/babel">
   const root = ReactDOM.createRoot(document.getElementById('root'));
-
-  function formatName(user) {
-    return user.firstName + '' + user.lastName;
+  function Welcome(props) {
+    return <h1>Hello, {props.name}</h1>;
   }
 
-  const user = {
-    firstName: 'Harper',
-    lastName: 'Perez'
-  };
-  
-  const element = (
-    <h1>
-      Hello, {formatName(user)}!
-    </h1>
-  )
-  root.render(element);    
+  function App() {
+    return (
+      <div>
+        <Welcome name="ajax1" />
+        <Welcome name="ajax2" />
+        <Welcome name="ajax3" />
+      </div>
+    );
+  }
+  root.render(<App  />);
 </script>
 
 </html>
